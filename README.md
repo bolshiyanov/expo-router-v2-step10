@@ -16,6 +16,8 @@
   <a aria-label="" href="https://github.com/bolshiyanov/expo-router-v2-step11">Next 11 step 📚</a>
 </p>
 <a aria-label="" href="https://github.com/bolshiyanov/expo-router-v2-step9"><b>Go back to 9 step</b></a>
+
+<img align="center" alt="Multilenguage routing to static pages with Expo-Router v2" height="80%" src="./assets/images/Scr1.jpg">
 ---
 
 - [📚 About this step](#-documentation)
