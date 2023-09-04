@@ -10,7 +10,7 @@ import {
 import { TabBarIcon } from "@/components/navigatorComponents/tab-bar-icon";
 import { useAppSelector } from "@/components/utils/hooks/redux";
 import ChangeLangButton from "../LanguageComponents/ChangeLangButton";
-
+import { __ } from "../LanguageComponents/TranslateComponent/systemTranslatre";
 import Colors from "config";
 
 const FooterComponent = () => {
@@ -41,26 +41,26 @@ const FooterComponent = () => {
                 },
               ]}
             >
-              company
+              {__("company")}
             </Text>
             <TouchableOpacity>
               <Text style={[styles.link, { color: selectedTheme.subTitle }]}>
-                about us
+              {__("about us")}
               </Text>
             </TouchableOpacity>
             <TouchableOpacity>
               <Text style={[styles.link, { color: selectedTheme.subTitle }]}>
-                our services
+              {__("our services")}
               </Text>
             </TouchableOpacity>
             <TouchableOpacity>
               <Text style={[styles.link, { color: selectedTheme.subTitle }]}>
-                privacy policy
+              {__("privacy policy")}
               </Text>
             </TouchableOpacity>
             <TouchableOpacity>
               <Text style={[styles.link, { color: selectedTheme.subTitle }]}>
-                affiliate program
+              {__("affiliate program")}
               </Text>
             </TouchableOpacity>
           </View>
@@ -74,7 +74,7 @@ const FooterComponent = () => {
                 },
               ]}
             >
-              Supported languages
+              {__("Supported languages")}
             </Text>
 
             <ChangeLangButton />
@@ -89,31 +89,31 @@ const FooterComponent = () => {
                 },
               ]}
             >
-              get help
+              {__("get help")}
             </Text>
             <TouchableOpacity>
               <Text style={[styles.link, { color: selectedTheme.subTitle }]}>
-                FAQ
+              {__("FAQ")}
               </Text>
             </TouchableOpacity>
             <TouchableOpacity>
               <Text style={[styles.link, { color: selectedTheme.subTitle }]}>
-                shipping
+              {__("shipping")}
               </Text>
             </TouchableOpacity>
             <TouchableOpacity>
               <Text style={[styles.link, { color: selectedTheme.subTitle }]}>
-                returns
+              {__("returns")}
               </Text>
             </TouchableOpacity>
             <TouchableOpacity>
               <Text style={[styles.link, { color: selectedTheme.subTitle }]}>
-                order status
+              {__("order status")}
               </Text>
             </TouchableOpacity>
             <TouchableOpacity>
               <Text style={[styles.link, { color: selectedTheme.subTitle }]}>
-                payment options
+              {__("payment options")}
               </Text>
             </TouchableOpacity>
           </View>
@@ -127,7 +127,7 @@ const FooterComponent = () => {
                 },
               ]}
             >
-              follow us
+              {__("follow us")}
             </Text>
             <View style={styles.socialLinks}>
               {/* /social icons */}

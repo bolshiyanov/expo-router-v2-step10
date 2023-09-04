@@ -2,7 +2,7 @@ import { makeIcon } from "./tab-bar-icon";
 import { StyleSheet } from "@bacons/react-views";
 import React from "react";
 import { Platform, Text, useWindowDimensions, View } from "react-native";
-
+import { __ } from "../LanguageComponents/TranslateComponent/systemTranslatre";
 import { useAppSelector } from "@/components/utils/hooks/redux";
 
 import { cns } from "../utils/cns";
@@ -71,19 +71,19 @@ const SideBar = ({ visible }) => {
 
           <View style={{ gap: 4, flex: 1 }}>
             <SideBarTabItem name="home" icon={makeIcon("home")}>
-              Home
+            {__("Home")}
             </SideBarTabItem>
             <SideBarTabItem name="blog" icon={makeIcon("explore")}>
-              Blog
+            {__("Blog")}
             </SideBarTabItem>
             <SideBarTabItem name="search" icon={makeIcon("search")}>
-              Search
+            {__("Search")}
             </SideBarTabItem>
           </View>
           {/* Divider */}
           <View>
             <SideBarTabItem name="auth" icon={makeIcon("more")}>
-              SignIn
+              {__("SignIn")}
             </SideBarTabItem>
           </View >
         </View>

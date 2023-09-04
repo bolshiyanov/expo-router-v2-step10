@@ -3,6 +3,7 @@ import { useAppSelector } from "@/components/utils/hooks/redux";
 import { Pressable, View } from "react-native";
 import ArrowLeft from "@/assets/icons/arrow-left-solid.svg";
 import Colors from "config";
+import { __ } from "@/components/LanguageComponents/TranslateComponent/systemTranslatre";
 
 export const unstable_settings = {  
   initialRouteName: "index",
@@ -18,7 +19,7 @@ export default function LayoutBlogComponent() {
       screenOptions={{
         headerStyle: { backgroundColor: selectedTheme.backgroundNav },
         headerShown: true,
-        title: "POSTS",
+        title: __("POSTS"),
         headerTitleStyle: {
           fontWeight: "400",
           color: selectedTheme.text
