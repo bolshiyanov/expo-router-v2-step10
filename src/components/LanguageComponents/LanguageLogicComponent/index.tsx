@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "@/components/utils/hooks/redux";
+import { useAppDispatch } from "@/components/utils/hooks/redux";
 import { getLocales } from "expo-localization";
 import { langChangeAction } from "@/store/reducers/LangSlice";
 import { supportedLang, defaultdLang } from "config";
@@ -7,7 +7,6 @@ import { Platform } from "react-native";
 
 const LanguageLogicComponent = () => {
   const dispatch = useAppDispatch();
-  const savedLang = useAppSelector((state) => state.langSlice.lang);
 
   function extractKeys(arr) {
     return arr.map((obj) => Object.keys(obj)[0]);

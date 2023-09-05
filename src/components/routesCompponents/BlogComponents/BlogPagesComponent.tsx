@@ -35,7 +35,7 @@ const BlogPagesComponent = ({ langPage }) => {
             <View style={styles.detailsContainer}>
               <Text style={[styles.name, { color: selectedTheme.text }]}>
                 {" "}
-                {item.name}{" "}
+                {transformLanguageData("name", langPage, item)}{" "}
               </Text>
               {item.descriptionsEn && (
                 <Text

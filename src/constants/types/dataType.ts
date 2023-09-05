@@ -1,6 +1,11 @@
 export interface DataTypeInterface {
     id: string;
-    name: string;
+    nameEn: string;
+    nameEs: string;
+    nameDe: string;
+    nameIt: string;
+    nameFr: string;
+    nameRu: string;
     path: string;
     type: string;    
     image: string;    

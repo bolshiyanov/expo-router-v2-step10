@@ -3,6 +3,6 @@ import BlogIndexComponent from "@/components/routesCompponents/BlogComponents/Bl
 
 const IndexBlogRoute = () => {
   const lang = "de";
-  return <BlogIndexComponent />;
+  return <BlogIndexComponent langPage={lang} />;
 };
 export default IndexBlogRoute;
