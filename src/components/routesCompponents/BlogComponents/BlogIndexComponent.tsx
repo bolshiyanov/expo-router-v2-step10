@@ -10,7 +10,7 @@ import {
   useWindowDimensions,
   StyleSheet,
   Text,
-  View,
+  SafeAreaView,
 } from "react-native";
 import Colors from "config";
 
@@ -39,25 +39,24 @@ export default function BlogIndexComponent() {
       </Pressable>
     </Link>
   );
+  const FooterComp = () => {
+    return <FooterComponent />
+  }
 
   return (
-    <ScrollView>
-      <View
-        style={[
-          styles.container,
-          { backgroundColor: selectedTheme.background },
-        ]}
-      >
-        <FlatList
-          data={data}
-          renderItem={renderItem}
-          keyExtractor={(item) => item.path}
-          numColumns={size}
-          key={size}
-        />
-      </View>
-      <FooterComponent />
-    </ScrollView>
+    <SafeAreaView
+      style={[styles.container, { backgroundColor: selectedTheme.background }]}
+    >
+      <FlatList
+        data={data}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.path}
+        numColumns={size}
+        key={size}
+        ListFooterComponent={FooterComp}
+      />
+      
+    </SafeAreaView>
   );
 }
 

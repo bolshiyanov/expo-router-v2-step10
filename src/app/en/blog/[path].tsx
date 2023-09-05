@@ -4,7 +4,7 @@ import data from "@/data/data";
 
 const BlogPagesxRoutes = () => {
   const lang = "en";
-  return <BlogPagesComponent />;
+  return <BlogPagesComponent langPage={lang}/>;
 };
 export default BlogPagesxRoutes; 
 

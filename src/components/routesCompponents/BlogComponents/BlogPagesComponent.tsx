@@ -2,14 +2,13 @@ import { useLocalSearchParams } from "expo-router";
 import React from "react";
 import { View, StyleSheet, Image, Text } from "react-native";
 import { useAppSelector } from "@/components/utils/hooks/redux";
-
+import transformLanguageData from "@/components/utils/transformLanguageData";
 import { ScrollView } from "react-native-gesture-handler";
 import FooterComponent from "@/components/FooterComponent";
-
 import data from "@/data/data";
 import Colors from "config";
 
-const BlogPagesComponent = () => {
+const BlogPagesComponent = ({ langPage }) => {
   const isProduction = process.env.NODE_ENV === "production";
   const theme = useAppSelector((state) => state.themeSlice.theme);
   const selectedTheme = theme === "dark" ? Colors.dark : Colors.light;
@@ -24,7 +23,7 @@ const BlogPagesComponent = () => {
     ? updatedPath[0]
     : updatedPath;
   const item = data.find((c) => c.path.toString() === selectedPath);
-
+  
   return (
     <ScrollView
       style={[styles.container, { backgroundColor: selectedTheme.background }]}
@@ -45,7 +44,7 @@ const BlogPagesComponent = () => {
                     { color: selectedTheme.subTitle },
                   ]}
                 >
-                  {item.descriptionsEn}
+                  {transformLanguageData("descriptions", langPage, item)}
                 </Text>
               )}
             </View>
