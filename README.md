@@ -4,7 +4,7 @@
     <img alt="expo sdk" height="128" src="./assets/images/banner.png">
     <h1 align="center">Expo Router v2 </h1>
     <h2 align="center">step by step tutorial </h2>
-    <h3 align="center">We are creating an optimized SEO blog in React Native, with multilingual support. At this stage, we are adding translations</h3>
+    <h3 align="center">At this stage, we are dealing with system translations and JSON for the static Expo-router v2 website</h3>
   </a>
 <h5 align="center"> <a aria-label="expo documentation" href="https://maps.menu">We are revamping this: maps.menu 📚</a></h5>
 </p>
