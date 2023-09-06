@@ -6,7 +6,7 @@ const BlogPagesxRoutes = () => {
   const lang = "de";
   return <BlogPagesComponent langPage={lang}/>;
 };
-export default BlogPagesxRoutes; 
+export default BlogPagesxRoutes;  
 
 export async function generateStaticParams(): Promise<
   Record<string, string>[]

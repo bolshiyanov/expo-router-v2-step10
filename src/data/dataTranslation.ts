@@ -1,4 +1,4 @@
-[
+export default [
     {
         "en": "Supported languages",
         "ru": "Поддерживаемые языки",

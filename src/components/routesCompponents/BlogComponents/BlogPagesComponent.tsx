@@ -9,6 +9,7 @@ import data from "@/data/data";
 import Colors from "config";
 
 const BlogPagesComponent = ({ langPage }) => {
+  
   const isProduction = process.env.NODE_ENV === "production";
   const theme = useAppSelector((state) => state.themeSlice.theme);
   const selectedTheme = theme === "dark" ? Colors.dark : Colors.light;

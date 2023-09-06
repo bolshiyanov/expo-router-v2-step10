@@ -9,15 +9,15 @@ import {
   Pressable,
   useWindowDimensions,
   StyleSheet,
-  Text
+  Text,
 } from "react-native";
 import Colors from "config";
 
 import { DataTypeInterface } from "@/constants/types/dataType";
 import data from "@/data/data";
 
-export default function BlogIndexComponent({langPage}) {
-  const lang = "es";
+const BlogIndexComponent = ({ langPage }) => {
+ 
   const theme = useAppSelector((state) => state.themeSlice.theme);
   const selectedTheme = theme === "dark" ? Colors.dark : Colors.light;
   const isProduction = process.env.NODE_ENV === "production";
@@ -26,35 +26,31 @@ export default function BlogIndexComponent({langPage}) {
   const size = Math.round(width / 250);
   
   const renderItem = ({ item }: { item: DataTypeInterface }) => (
-  
     <Link
-      href={`/${lang}/blog/${isProduction ? item.path + ".html" : item.path}`}
+      href={`/${langPage}/blog/${isProduction ? item.path + ".html" : item.path}`}
       asChild
     >
       <Pressable style={styles.city}>
         <Image style={styles.image} source={{ uri: item.image }} />
         <Text style={[styles.name, { color: selectedTheme.subTitle }]}>
-        {transformLanguageData("name", langPage, item)}
+          {transformLanguageData("name", langPage, item)}
         </Text>
       </Pressable>
     </Link>
   );
 
-
   return (
-   
-      <FlatList
-        data={data}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.path}
-        numColumns={size}
-        key={size}
-        style={[styles.container, { backgroundColor: selectedTheme.background }]}
-       ListFooterComponent={FooterComponent}
-      />
-     
+    <FlatList
+      data={data}
+      renderItem={renderItem}
+      keyExtractor={(item) => item.path}
+      numColumns={size}
+      key={size}
+      style={[styles.container, { backgroundColor: selectedTheme.background }]}
+      ListFooterComponent={FooterComponent}
+    />
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -83,3 +79,4 @@ const styles = StyleSheet.create({
     textTransform: "uppercase",
   },
 });
+export default BlogIndexComponent;
