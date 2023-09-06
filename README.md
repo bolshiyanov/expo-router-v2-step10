@@ -42,8 +42,12 @@ The second part involves stories about how to translate data that comes to us fr
 ## 🗺  Step-by-Step Guide:<br/>
 <img align="center" alt="Multilenguage routing to static pages with Expo-Router v2" height="80%" src="./assets/images/Scr2.png">
 
-First, I want to create a library that will have a JSON file containing all the system translations. At the current stage, I've limited it to six languages, but the system is flexible enough to add any number of languages as needed.
-<img align="center" alt="Multilenguage routing to static pages with Expo-Router v2" height="80%" src="./assets/images/Scr7.png">
+1) First, I want to create a library that will have a JSON file containing all the system translations. At the current stage, I've limited it to six languages, but the system is flexible enough to add any number of languages as needed.
+
+<img align="center" alt="Multilenguage routing to static pages with Expo-Router v2" height="80%" src="./assets/images/Scr3.png">
+
+2) Here, I'm creating a highly compact function, "systemTranslate.ts," for translations with a simple structure. We will use this script in every component where we have texts. For example, we have a lot of translations in the "Footer" component.
+
 
 ...
 
