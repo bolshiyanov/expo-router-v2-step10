@@ -50,7 +50,7 @@ The second part involves stories about how to translate data that comes to us fr
 
 <img align="center" alt="Multilenguage routing to static pages with Expo-Router v2" height="80%" src="./assets/images/Scr4.png">
 
-3) Translate beautifully into English: "Now I will create a function for those components that take data and contain translated texts in fields such as 'descriptions,' 'name,' and others.
+3) Now I will create a function for those components that take data and contain translated texts in fields such as 'descriptions,' 'name,' and others.
 
 The 'transformData' function takes the field name as its first parameter and the current page language obtained from 'props' as well as the object itself.
 
@@ -84,14 +84,15 @@ Add the following logic to the project:
 
 2) In transformLanguageData, the logic is as follows:
 
-If a "*" is found in the translation field, replace "*" with the text from the nameEn field."
+If a "*" is found in the translation field, replace "*" with the text from the nameEn field.
 
 
 ## 🗺 Stack of this step
 `new`
-- [`expo-localization`](expo-localization) A library that provides an interface for native user localization information.
+- [`translations`](translations) I added a script for translating the website into multiple languages..
 
 `earlier versions`
+- [`expo-localization`](expo-localization) A library that provides an interface for native user localization information.
 - [`flatlist`](flatlist) A FlatList in React Native is a component for efficiently rendering lists of data in a mobile app.
 - [`reduxjs/toolkit`](reduxjs/toolkit) A Comprehensive Library for Efficient State Management and Development.
 - [`local storage`](local-storage) Browser local storage is a feature that allows websites to store data locally on a user's device.
