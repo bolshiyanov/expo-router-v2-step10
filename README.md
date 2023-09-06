@@ -40,8 +40,9 @@ This step of my Expo-router v2 tutorial consists of two parts. In the first part
 The second part involves stories about how to translate data that comes to us from the server in JSON format. I will create the foundation for adding various data types to existing translations and will display the translation that corresponds to the system's language.
 
 ## 🗺  Step-by-Step Guide:<br/>
+<img align="center" alt="Multilenguage routing to static pages with Expo-Router v2" height="80%" src="./assets/images/Scr2.png">
 
-...
+First, I want to create a library that will have a JSON file containing all the system translations. At the current stage, I've limited it to six languages, but the system is flexible enough to add any number of languages as needed.
 <img align="center" alt="Multilenguage routing to static pages with Expo-Router v2" height="80%" src="./assets/images/Scr7.png">
 
 ...
