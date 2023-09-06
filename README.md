@@ -48,12 +48,43 @@ The second part involves stories about how to translate data that comes to us fr
 
 2) Here, I'm creating a highly compact function, "systemTranslate.ts," for translations with a simple structure. We will use this script in every component where we have texts. For example, we have a lot of translations in the "Footer" component.
 
+<img align="center" alt="Multilenguage routing to static pages with Expo-Router v2" height="80%" src="./assets/images/Scr4.png">
 
-...
+3) Translate beautifully into English: "Now I will create a function for those components that take data and contain translated texts in fields such as 'descriptions,' 'name,' and others.
+
+The 'transformData' function takes the field name as its first parameter and the current page language obtained from 'props' as well as the object itself.
+
+In its body, the function compares the received language with the list of supported languages from 'config.' The function will return the corresponding translation, and if the language is not supported, it will display the default language translation.
+
+With this, the translation work is complete.
+
+Once we start receiving translations from the server, I will add the ability to store translations in the Reducer to extract the dependency for the project's root.
+
+I will do it like this: until translations are received from the server, display the project without translations. After the translations are loaded, they will be added to the version of the application without translations.
+
+In my experience, translations can take up quite a bit of space and should not hinder the application.
+
+However, this will be implemented step by step when we start working with a real server in step 13.
+
+Next steps, 11:
+I will create a search and filtering page.
+
+In step 12, I will add the layout of the main page and work on the application's appearance.
+
+I'm glad you've read this far.
 
 ## ❓ Task
 
-...
+
+In the 'name' field of any project, English names often repeat in other languages. This creates a lot of redundant data.
+
+Add the following logic to the project:
+
+1) In translateData.ts, replace all duplicates of the English version of each item.name with "*";
+
+2) In transformLanguageData, the logic is as follows:
+
+If a "*" is found in the translation field, replace "*" with the text from the nameEn field."
 
 
 ## 🗺 Stack of this step
